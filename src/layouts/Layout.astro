@@ -1,10 +1,13 @@
 ---
 const { title } = Astro.props;
+import {ViewTransitions} from "astro:transitions"
+
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
+		<ViewTransitions fallback="swap"/>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Personal website for Thomas Fagerli" />
 		<meta name="viewport" content="width=device-width" />
