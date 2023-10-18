@@ -9,13 +9,22 @@ import Footer from "../components/Footer.astro"
 	
 <Navbar />
 <main>
+	<h1>Thomas Fagerli</h1>
 	<img src="https://www.treasury.gov.ph/wp-content/uploads/2022/01/male-placeholder-image.jpeg" alt="Description of Image">
+	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor in voluptatem nemo dolore mollitia natus enim sit distinctio modi suscipit, assumenda rerum cumque alias laborum! Illo nesciunt perspiciatis ad voluptatum.</p>
 </main>
 <Footer />
 </Layout>
 
 <style>
-	
+main{
+	text-align: center;
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    background-color: green;
+}	
 img {
 	align-self: center;
 	width: 200px;
