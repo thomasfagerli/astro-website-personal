@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro"
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro"
+import Footer from "../components/Footer.astro"
+const allPosts = await Astro.glob('../pages/markdown/*.md');
+
+---
+
+<Layout title="Fagerli">
+	
+<Navbar />
+<main class="main">
+    {allPosts.map((post) => <div class="page">
+        <a href={post.url}>{post.frontmatter.title}</a>
+        <p>Created by {post.frontmatter.author}</p>
+    </div>)}
+</main>
+
+<Footer />
+</Layout>
+
+<style>
+.main {
+    grid-area: main;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.page{
+    height: fit-content;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+</style>
