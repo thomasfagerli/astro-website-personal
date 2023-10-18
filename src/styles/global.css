@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body{
     display: grid;
     grid-template-areas: 
@@ -5,10 +9,15 @@ body{
     "main"
     "footer"
     ;
+    margin-top: 0;
+    margin-bottom: 0;
+    grid-template-rows: auto 1fr auto;
     justify-items: center;
     position: relative;
-    min-height: 100vh;
+    height: 100vh;
     box-sizing: border-box;
-    
+
 }
+
+
 
