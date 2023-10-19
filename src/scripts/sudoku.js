@@ -3,15 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     solveButton.addEventListener("click", solveSudoku);
 });
 
-window.onload = function() {
-    if(!window.location.hash) {
-        window.location = window.location + '#loaded';
-        window.location.reload();
-    }
-}
 
 export async function solveSudoku() {
-    
     const table = document.querySelector("table");
     let board = [];
     for (let row of table.rows) {
