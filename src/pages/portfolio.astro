@@ -12,7 +12,7 @@ import Footer from "../components/Footer.astro"
 <Navbar />
 <main class="main">
     <ul>
-        <li><a href="/projects/sudoku" onclick="forceReload(event)">Sudoku</a></li>
+        <li><a id="sudokulink" href="/projects/sudoku">Sudoku</a></li>
       </ul>
 </main>
 <script>
@@ -20,6 +20,9 @@ import Footer from "../components/Footer.astro"
         event.preventDefault();
         window.location.href = event.currentTarget.href;
     }
+
+    // Select the anchor element and add the event listener
+    document.querySelector('#sudokulink').addEventListener('click', forceReload);
 </script>
 <Footer />
 </Layout>
