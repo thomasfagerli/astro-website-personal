@@ -13,13 +13,7 @@ const allProjects = await Astro.glob('../pages/projects/*.astro');
 <Navbar />
 <main class="main">
     <ul>
-        {allProjects.map((project) => {
-            const fileNameWithExtension = project.file.split('/').pop();
-            const fileName = fileNameWithExtension.replace('.astro', '');
-            return (
-                <a class="page" href={project.url}>{fileName}</a>
-            );
-        })}
+        <li><a href="/projects/sudoku"></a></li>
         
       </ul>
 </main>

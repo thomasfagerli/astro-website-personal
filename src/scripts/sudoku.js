@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
     solveButton.addEventListener("click", solveSudoku);
 });
 
-
 export async function solveSudoku() {
     const table = document.querySelector("table");
     let board = [];
