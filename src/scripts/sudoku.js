@@ -19,12 +19,11 @@ export async function solveSudoku() {
     try {
         // Adjust the following line to point to your PythonAnywhere subdomain
         let response = await fetch("https://thomasfagerli.pythonanywhere.com/solve", {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin':'*' 
-            },
-            body: JSON.stringify({ board: board })
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ board: board })
         });
 
         let data = await response.json();
