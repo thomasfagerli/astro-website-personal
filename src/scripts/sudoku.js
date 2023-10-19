@@ -1,3 +1,9 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const solveButton = document.getElementById("solveButton");
+    solveButton.addEventListener("click", solveSudoku);
+});
+
+
 export async function solveSudoku() {
     
     const table = document.querySelector("table");
@@ -11,8 +17,7 @@ export async function solveSudoku() {
     }
 
     try {
-        // Adjust the following line to point to your PythonAnywhere subdomain
-        let response = await fetch("https://yourusername.pythonanywhere.com/solve", {
+        let response = await fetch("https://thomasfagerli.pythonanywhere.com/solve", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
