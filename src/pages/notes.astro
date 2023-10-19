@@ -11,22 +11,21 @@ const allPosts = await Astro.glob('../pages/markdown/*.md');
 	
 <Navbar />
 <main class="main">
-    {allPosts.map((post) => <div class="page" onclick="redirectTo('https://example.com')">
-        <a href={post.url}>{post.frontmatter.title}</a>
-        <p>Created by {post.frontmatter.author}</p>
-    </div>)}
+    {allPosts.map((post) => 
+        <a class="page" href={post.url}>{post.frontmatter.title}
+        <p>Created by {post.frontmatter.author}</p></a>
+    )}
 </main>
-
 <Footer />
-<script>
-function redirectTo(url) {
-window.location.href = url;
-}
-</script>
 </Layout>
 
 <style>
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
+}
 
 .page {
     cursor: pointer;    
@@ -42,6 +41,11 @@ window.location.href = url;
     margin: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); 
     transition: transform 0.2s, box-shadow 0.2s; 
+    color: black;
+    text-decoration: none;
+    
+
+    
 }
 
 .page:hover {
@@ -49,21 +53,11 @@ window.location.href = url;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15); 
 }
 
-.page a{
-    
-    text-decoration: none;
-}
 .page p {
-    color: black; 
     font-size: 10px;
 }
 
-.main {
-    grid-area: main;
-    display: flex;
-    flex-direction: row;
 
-}
 
 
 

@@ -1,0 +1,151 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import "../../styles/global.css";
+import "../../styles/sudoku.css";
+import Navbar from "../../components/Navbar.astro"
+import Footer from "../../components/Footer.astro"
+---
+<Layout>
+<Navbar />
+<main class="main">
+<table class="sudoku">
+    <tr>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+    </tr>
+    <tr>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+    </tr>
+    <tr>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+    </tr>
+    <tr>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+    </tr>
+    <tr>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+    </tr>
+    <tr>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+    </tr>
+    <tr>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+    </tr>
+    <tr>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+    </tr>
+    <tr>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+        <td><input type="number" min="1" max="9"></td>
+    </tr>
+</table>
+<script>
+import "../../scripts/sudoku.js";
+
+
+</script>
+<button id="solveButton" >Solve</button>
+</main>
+
+<Footer />
+</Layout>
+
+<style>
+.main{
+	grid-area: main;
+	text-align: center;
+	min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}	 
+
+main button {
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 30px;
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+main button:hover {
+
+  background-color: #555555;
+  color: white;
+}
+
+</style>
+
+
