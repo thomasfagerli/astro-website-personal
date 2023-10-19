@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const solveButton = document.getElementById("solveButton");
     solveButton.addEventListener("click", solveSudoku);
 });
+console.log('Hi! I’m the server. This is logged in the terminal where Astro is running.');
 
 export async function solveSudoku() {
     const table = document.querySelector("table");
