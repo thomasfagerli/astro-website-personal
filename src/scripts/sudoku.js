@@ -38,6 +38,7 @@ export async function solveSudoku() {
             alert(data.message);
         }
     } catch (error) {
+        console.error("Error details:", error);
         alert("Failed to solve. Check your input or try again later.");
     }
 }
