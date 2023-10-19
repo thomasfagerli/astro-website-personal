@@ -12,10 +12,15 @@ import Footer from "../components/Footer.astro"
 <Navbar />
 <main class="main">
     <ul>
-        <li><a href="/projects/sudoku">Sudoku</a></li>
+        <li><a href="/projects/sudoku" onclick="forceReload(event)">Sudoku</a></li>
       </ul>
 </main>
-
+<script>
+    function forceReload(event) {
+        event.preventDefault();
+        window.location.href = event.currentTarget.href;
+    }
+    </script>
 <Footer />
 </Layout>
 
