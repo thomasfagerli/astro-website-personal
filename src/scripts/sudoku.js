@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     solveButton.addEventListener("click", solveSudoku);
 });
 
+window.location.reload();
 
 export async function solveSudoku() {
     
