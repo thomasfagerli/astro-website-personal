@@ -11,6 +11,11 @@ const allPosts = await Astro.glob('../pages/markdown/*.md');
 	
 <Navbar />
 <main class="main">
+    <h1>Under construction</h1>
+    
+    <p>Goal for this page is to share my experiences with different technologies, exploits, notes</p>
+    <br>
+    
     {allPosts.map((post) => 
         <a class="page" href={post.url}>{post.frontmatter.title}
         <p>Created by {post.frontmatter.author}</p></a>
@@ -24,6 +29,7 @@ const allPosts = await Astro.glob('../pages/markdown/*.md');
     grid-area: main;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    width: 500px;
 
 }
 
