@@ -11,8 +11,8 @@ import Footer from "../components/Footer.astro"
 	
 <Navbar />
 <main class="main">
-    <ul>
-        <li><a id="sudokulink" href="/projects/sudoku">Sudoku</a></li>
+    <ul><h2>This is a list for my project (under construction)</h1>
+        <a class="sudokulink" href="/projects/sudoku">Sudoku Solver</a>
       </ul>
 </main>
 <script>
@@ -26,4 +26,38 @@ import Footer from "../components/Footer.astro"
 </script>
 <Footer />
 </Layout>
+
+<style>
+    main {
+        display: flex;
+    }
+
+    main ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sudokulink {
+    width: fit-content;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: #3498db; /* Choose any color you prefer */
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+
+    .sudokulink:hover {
+        background-color: #2980b9; /* Darker shade for hover effect */
+    }
+
+    .sudokulink:active {
+        background-color: #1c598f; /* Even darker shade for active/click effect */
+    }
+</style>
 
